@@ -73,19 +73,19 @@
 
         sym {
             bindings = <
-&kp NUM_1  &kp NUM_2  &kp NUM_3        &kp NUM_4        &kp NUM_5     &kp NUM_6  &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp NUM_0
-&kp TAB    &kp LC(S)  &kp DQT          &kp PIPE2        &kp HASH      &kp MINUS  &kp EQL    &kp LBKT   &kp RBKT   &kp DEL
-&kp ESC    &kp TILDE  &kp NON_US_BSLH  &kp NON_US_HASH  &kp TILDE2    &kp MINUS  &kp GRAVE  &kp LBKT   &kp RBKT   &kp DEL
-&mo 1      &kp LGUI                                                                                    &kp RGUI   &mo 2
+&kp ESCAPE  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp TILDE      &kp CARET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
+&kp MINUS   &kp ASTERISK      &kp EQUAL       &kp UNDERSCORE        &kp DOLLAR     &kp HASH   &kp RIGHT_GUI          &kp RIGHT_ALT    &kp RIGHT_CONTROL  &kp RIGHT_SHIFT
+&kp PLUS    &kp PIPE          &kp AT_SIGN     &kp SLASH             &kp PERCENT    &kp MINUS  &kp BACKSLASH          &kp AMPERSAND    &kp QUESTION       &kp EXCLAMATION
+&mo 2       &kp LEFT_SHIFT                                                                                                            &kp SPACE          &mo 1
             >;
         };
 
         nav {
             bindings = <
-&kp BANG  &kp ATSN   &kp HASH  &kp DLLR  &kp PRCT    &kp CRRT   &kp AMPS      &kp KMLT  &kp LPRN  &kp RPRN
-&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN    &kp MINUS  &kp KP_EQUAL  &kp LBRC  &kp RBRC  &kp BKSP
-&kp LSFT  &kp KPLS   &kp LBKT  &kp RBKT  &kp BSLH    &kp UNDER  &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT
-&mo 3     &kp LCTL                                                                      &kp SPC   &mo 2
+&kp TAB         &kp ATSN        &kp HASH      &kp DLLR       &kp PRCT            &kp CRRT   &kp AMPS       &kp UP       &kp HOME   &kp DEL
+&kp LEFT_SHIFT  &kp LCTRL       &kp LEFT_ALT  &kp LEFT_GUI   &kp SCLN            &kp MINUS  &kp LEFT       &kp DOWN     &kp RIGHT  &kp BACKSPACE
+&kp LSFT        &kp KPLS        &kp K_BACK    &kp K_FORWARD  &kp K_PLAY_PAUSE    &kp UNDER  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp ENTER
+&mo 2           &kp LEFT_SHIFT                                                                                          &kp SPACE  &mo 1
             >;
         };
 
