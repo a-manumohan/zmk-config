@@ -53,9 +53,15 @@
             bindings = <&kp RGUI>;
         };
 
-        mo_num {
-            bindings = <&mo 3>;
-            key-positions = <30 33>;
+        Bootloader {
+            bindings = <&bootloader>;
+            key-positions = <0 9>;
+            layers = <4>;
+        };
+
+        mo_settings {
+            bindings = <&mo 4>;
+            key-positions = <32 31>;
         };
     };
 
@@ -82,20 +88,38 @@
 
         nav {
             bindings = <
-&kp TAB         &kp ATSN        &kp HASH      &kp DLLR       &kp PRCT            &kp CRRT   &kp AMPS       &kp UP       &kp HOME   &kp DEL
-&kp LEFT_SHIFT  &kp LCTRL       &kp LEFT_ALT  &kp LEFT_GUI   &kp SCLN            &kp MINUS  &kp LEFT       &kp DOWN     &kp RIGHT  &kp BACKSPACE
-&kp LSFT        &kp KPLS        &kp K_BACK    &kp K_FORWARD  &kp K_PLAY_PAUSE    &kp UNDER  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp ENTER
-&mo 2           &kp LEFT_SHIFT                                                                                          &kp SPACE  &mo 1
+&kp TAB         &kp LG(TAB)     &kp HASH      &kp DLLR       &kp C_VOLUME_UP      &kp C_RESET   &kp AMPS       &kp UP       &kp HOME   &kp DEL
+&kp LEFT_SHIFT  &kp LCTRL       &kp LEFT_ALT  &kp LEFT_GUI   &kp C_VOLUME_DOWN    &kp CAPSLOCK  &kp LEFT       &kp DOWN     &kp RIGHT  &kp BACKSPACE
+&kp LC(LA(L))   &kp LG(SPACE)   &kp K_BACK    &kp K_FORWARD  &kp K_PLAY_PAUSE     &kp UNDER     &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp ENTER
+&mo 2           &kp LEFT_SHIFT                                                                                              &kp SPACE  &mo 1
             >;
         };
 
         num {
             bindings = <
-&kp NUM_1   &kp NUM_2   &kp NUM_3   &kp NUM_4  &kp NUM_5    &trans  &trans     &trans        &trans      &trans
-&kp F1      &kp F2      &kp F3      &kp F4     &kp F5       &trans  &kp PG_UP  &kp K_VOL_UP  &kp K_MUTE  &trans
-&bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &kp F6     &kp F7       &trans  &kp PG_DN  &kp K_VOL_DN  &trans      &trans
-&trans      &trans                                                                           &trans      &trans
+&trans        &kp NUMBER_7  &kp NUMBER_8  &kp N9        &trans    &kp F12  &kp F7  &kp F8  &kp F9  &trans
+&trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans    &kp F11  &kp F4  &kp F5  &kp F6  &trans
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans    &kp F10  &kp F1  &kp F2  &kp F3  &trans
+&trans        &trans                                                                       &trans  &trans
             >;
+        };
+
+        settings {
+            bindings = <
+&trans  &trans  &trans  &trans  &bt BT_CLR_ALL    &bt BT_SEL 0  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &bt BT_SEL 4      &bt BT_SEL 1  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &bt BT_SEL 3      &bt BT_SEL 2  &trans  &trans  &trans  &trans
+&trans  &trans                                                                  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        num {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
